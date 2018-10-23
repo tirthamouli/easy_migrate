@@ -1,13 +1,13 @@
 # EasyMigrate
 
 This is a code igniter starter project with a custom migrate functionality.
-This functonality is provided in an additional controller which can only be accessed from the command line
+This functon is provided with an additional controller which can only be accessed from the command line
 Controller is in application/controller/console
 
 
-## Pre Requisits
+## Pre Requisites
 
-You need to establish connection to a database with all basic privilages.
+You need to establish connection to a database with all basic privileges.
 Change configuration in application/config/database.php
 
 
@@ -21,7 +21,7 @@ Write the reverse of those changes in the down method
 Eg: create table in up method then drop table in down method
 
 ### 2. php index.php console migrate version <version number>
-##### Vesion number is the timestamp at the begining of the files
+##### Vesion number is the timestamp at the beginning of the files
 This function moves the database to the specified version.
 If the current version is greater that the specified version, the database will be reverted back.
 
@@ -37,3 +37,15 @@ This will check the current version and latest version available and make all th
 This function checks all the files from which changed have not been applied to the database and those changes are applied.
 
 ###### Warning: Conflicting commands by different people like creating a table twice etc will generate an error.
+
+
+## Use it in your project
+If you don't want to start a fresh project and just want to use the functionality.
+
+###1. Copy and paste config folder from application/controller directory to your own application/controller directory
+
+###2. Copy and paste MY_Migration from application/libraries to your own application/libraries
+
+###3. Copy and paste cli folder from application/views to your application/views folder
+
+###4. Change 
