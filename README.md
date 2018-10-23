@@ -42,10 +42,12 @@ This function checks all the files from which changed have not been applied to t
 ## Use it in your project
 If you don't want to start a fresh project and just want to use the functionality.
 
-###1. Copy and paste config folder from application/controller directory to your own application/controller directory
+### 1. Copy and paste config folder from application/controller directory to your own application/controller directory
 
-###2. Copy and paste MY_Migration from application/libraries to your own application/libraries
+### 2. Copy and paste MY_Migration from application/libraries to your own application/libraries
 
-###3. Copy and paste cli folder from application/views to your application/views folder
+### 3. Copy and paste cli folder from application/views to your application/views folder
 
-###4. Change 
+### 4. Change $config['migration_enabled'] = TRUE; in application/config/migration.php
+
+You can use the above commands now.
