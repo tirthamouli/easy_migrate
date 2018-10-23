@@ -5,19 +5,16 @@ This functonality is provided in an additional controller which can only be acce
 Controller is in application/controller/console
 
 *************
-
 ## Pre Requisits
 
-*************
+
 
 You need to establish connection to a database with all basic privilages.
 Change configuration in application/config/database.php
 
 ***********************
-
 ## Commands to use migrate
 
-***********************
 
 ### 1. php index.php console migrate generate <name>
 Generates a php file in applicaion/migrations/ folder
