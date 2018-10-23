@@ -1,6 +1,4 @@
-###################
-	#EasyMigrate
-###################
+# EasyMigrate
 
 This is a code igniter starter project with a custom migrate functionality.
 This functonality is provided in an additional controller which can only be accessed from the command line
