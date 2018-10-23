@@ -6,7 +6,7 @@ Controller is in application/controller/console
 
 *************
 
-##Pre Requisits
+## Pre Requisits
 
 *************
 
@@ -15,7 +15,7 @@ Change configuration in application/config/database.php
 
 ***********************
 
-##Commands to use migrate
+## Commands to use migrate
 
 ***********************
 
