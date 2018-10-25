@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Migrate extends CI_Controller{
+class Migration extends CI_Controller{
 
   public function __construct(){
     parent::__construct();
@@ -93,8 +93,20 @@ class Migrate extends CI_Controller{
             echo "File allredy exists:\n" . $filepath . PHP_EOL;
             return;
         }
-        $data['className'] = str_replace(".php","",$filename);
-        $template = $this->load->view('cli/migrations/migration_class_template', $data, TRUE);
+
+        $template =
+"defined('BASEPATH') OR exit('No direct script access allowed');
+class Migration_".str_replace(".php","",$filename)." extends MY_Migration {
+  public function up()
+  {
+    //Database changes
+  }
+
+  public function down()
+  {
+    //Reverse the database changes
+  }
+}";
         //Create file
         try{
             $file = fopen($filepath, "w");
@@ -131,7 +143,7 @@ class Migrate extends CI_Controller{
    * Adds all the migrations that weren't added
    *
    */
-  public function upgrade(){
+  public function update(){
     $this->load->database();
     // Folder exists?
     $folderPath = APPPATH . 'migrations';
