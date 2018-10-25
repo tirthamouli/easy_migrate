@@ -11,7 +11,7 @@ Change configuration in application/config/database.php
 
 ## Commands to use migrate
 
-### 1. php index.php console migration generate /<name/>
+### 1. php index.php console migration generate /name/
 
 Generates a php file in applicaion/migrations/ folder
 Write the database change commands in the up method
@@ -19,7 +19,7 @@ Write the reverse of those changes in the down method
 
 Eg: create table in up method then drop table in down method
 
-### 2. php index.php console migration version /<version number/>
+### 2. php index.php console migration version /version number/
 
 ##### Vesion number is the timestamp at the beginning of the files
 
@@ -35,7 +35,7 @@ This will check the current version and latest version available and make all th
 
 ###### Warning: If you have merged with someone else's database changes (changed your application/migration directory to also include the database change done by someone else) and your current version is greater than their version and you try to go to the latest version, it will not reflect the other person's changes. Use command 4 for that
 
-### 4. php index.php console migration upgrade
+### 4. php index.php console migration update
 
 This function checks all the files from which changed have not been applied to the database and those changes are applied.
 
